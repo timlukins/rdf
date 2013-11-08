@@ -1,7 +1,9 @@
 Registered Differential Features
 =====
 
-"A discretised set of 15 categorical labels to describe the changes in curvature over time."[1]
+"A discretised set of 15 categorical labels to describe the intrinsic changes in curvature over time."
+
+As published in: T. C. Lukins, R. B. Fisher, "Qualitative Characterization of Deforming Surfaces", Proc. 3rd Int. Symp. on 3D Data Processing, Visualization, and Transmission (3DPVT), Chapel Hill, electronic proceedings, June 14-16, 2006. [1]
 
 ***
 
@@ -45,20 +47,15 @@ Theory
 
 <!-- Use http://www.url-encode-decode.com/urlencode to encode equations -->
 
-More precisely, consider the two principal curvatures centred on a surface neighbourhood. The principal curvatures are the two maximal changes in the form of the surface around that point. They have a direction and a magnitude of change. And they are orthogonal - i.e. at right angles to one another.
+More precisely, consider the two principal curvatures centred on a surface neighbourhood. The principal curvatures are the two maximal changes in the form of the surface around that point. They have a direction and a magnitude.
+
+We denote the magnitute of one as  ![equation](http://latex.codecogs.com/gif.latex?%5Ckappa_%7B1%7D) and the magnitude of the other as ![equation](http://latex.codecogs.com/gif.latex?%5Ckappa_%7B2%7D).
 
 <!-- S=\frac{2}{\pi}arctan\left((\kappa_{1}+\kappa_{2})/(\kappa_{1}-\kappa_{2})\right) -->
 
 <!-- C=\sqrt{(\kappa_{1}^{2}+\kappa_{2}^{2})/2}. -->
 
-Now, consider how these two properties - the respective magnitutes of the principle curvatures - change w.r.t. one another. 
-
-
-![equation](http://latex.codecogs.com/gif.latex?T%5Cin%5B1%2C...%2C15%5D) 
-
-<!-- T\in[1,...,15] --> 
-
-that can occur over any given duration as defined by the relative change in the principal curvatures: 
+Now, consider how these two properties - the respective magnitutes of the principle curvatures - change w.r.t. one another. In other words the change as denoted by: 
 
 ![equation](http://latex.codecogs.com/gif.latex?%5CDelta%5Ckappa_%7B1%7D)  
 
@@ -70,11 +67,19 @@ and
 
 <!-- \Delta\kappa_{2} -->
 
-As with the initial shape classes, in order to define the zero boundary region it is necessary to employ a threshold term: 
+As with the _S_ shape classes, in order to define the zero boundary region it is necessary to employ a threshold term: 
 
 ![equation](http://latex.codecogs.com/gif.latex?%5CDelta%5Ckappa%3D0%5Ciff-%5Ctheta_%7Bchange%7D%3C%5CDelta%5Ckappa%3C%5Ctheta_%7Bchange%7D)
 
 <!-- \Delta\kappa=0\iff-\theta_{change}<\Delta\kappa<\theta_{change} -->
+
+This results in the type _T_ of deformation:
+
+![equation](http://latex.codecogs.com/gif.latex?T%5Cin%5B1%2C...%2C15%5D) 
+
+<!-- T\in[1,...,15] --> 
+
+that can occur over any given duration as defined by the relative change in the principal curvatures: 
 
 We furthermore can define the extent of change: _E_ to also measure the degree to which this deformation occurs over the duration. 
 
