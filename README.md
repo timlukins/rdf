@@ -31,13 +31,13 @@ In essense, there are *15 possible ways* that the surface can distort:
 
 * Those that typify, and exemplify further, the formation of a prototypical form (e.g. *protrude* a peak, *subside* a pit, *fold* a valley, *bend* a ridge, *warp* a saddle).
 
-* Those that move the opposite way from the prototype form towards flat (e.g. *flatten*). In combination with the first transition, this serves to capture the equivalent variation in curvedness expressed by Koenderink.
+* Those that move the opposite way from the prototype form towards flat (e.g. *flatten*). 
 
 * Those bi-directional transitions that are also applicable only between neighbouring non-flat prototypes (e.g. to *squeeze* a pit to form a valley, to *collapse* a valley to form a pit, to *dimple* a valley to form a saddle, to *crumple* a saddle to form a valley, to *crease* a saddle to form a ridge, to *dent* a ridge to form a saddle, to *bulge* a ridge to form a peak, and *stretch* a peak to form a ridge).
   
 * Those shapes that do not make any transition - as they have no observable change in curvature (e.g. they are *constant*).
 
-This results in a total of *15 different deformation classes*, which we formalise as the *type* of deformation.
+This results in a total of *15 different deformation classes*, which we formalise as the **type** of deformation and the **extent** of change.
 
 
 Theory
@@ -54,23 +54,33 @@ More precisely, consider the two principal curvatures centred on a surface neigh
 Now, consider how these two properties - the respective magnitutes of the principle curvatures - change w.r.t. one another. 
 
 
-This results in a total of *15 different deformation classes*, which we formalise as the *type* of deformation:
+![equation](http://latex.codecogs.com/gif.latex?T%5Cin%5B1%2C...%2C15%5D) 
 
-![equation](http://latex.codecogs.com/gif.latex?T%5Cin%5B1%2C...%2C15%5D) <!-- T\in[1,...,15] --> 
+<!-- T\in[1,...,15] --> 
 
 that can occur over any given duration as defined by the relative change in the principal curvatures: 
 
-![equation](http://latex.codecogs.com/gif.latex?%5CDelta%5Ckappa_%7B1%7D)  <!-- \Delta\kappa_{1} -->
+![equation](http://latex.codecogs.com/gif.latex?%5CDelta%5Ckappa_%7B1%7D)  
+
+<!-- \Delta\kappa_{1} -->
 
 and 
 
-![equation](http://latex.codecogs.com/gif.latex?%5CDelta%5Ckappa_%7B2%7D)  <!-- \Delta\kappa_{2} -->
+![equation](http://latex.codecogs.com/gif.latex?%5CDelta%5Ckappa_%7B2%7D) 
 
-As with the initial shape classes, in order to define the zero boundary region it is necessary to employ a threshold term ($\Delta\kappa=0\iff-\theta_{change}<\Delta\kappa<\theta_{change}$). 
+<!-- \Delta\kappa_{2} -->
+
+As with the initial shape classes, in order to define the zero boundary region it is necessary to employ a threshold term: 
+
+![equation](http://latex.codecogs.com/gif.latex?%5CDelta%5Ckappa%3D0%5Ciff-%5Ctheta_%7Bchange%7D%3C%5CDelta%5Ckappa%3C%5Ctheta_%7Bchange%7D)
+
+<!-- \Delta\kappa=0\iff-\theta_{change}<\Delta\kappa<\theta_{change} -->
 
 We furthermore can define the extent of change: _E_ to also measure the degree to which this deformation occurs over the duration. 
 
-![equation](http://latex.codecogs.com/gif.latex?E%3D%5Csqrt%7B%5Cfrac%7B%5CDelta%5Ckappa_%7B1%7D%5E%7B2%7D%2B%5CDelta%5Ckappa_%7B2%7D%5E%7B2%7D%7D%7B2%7D%7D) <!-- E=\sqrt{\frac{\Delta\kappa_{1}^{2}+\Delta\kappa_{2}^{2}}{2}} -->
+![equation](http://latex.codecogs.com/gif.latex?E%3D%5Csqrt%7B%5Cfrac%7B%5CDelta%5Ckappa_%7B1%7D%5E%7B2%7D%2B%5CDelta%5Ckappa_%7B2%7D%5E%7B2%7D%7D%7B2%7D%7D) 
+
+<!-- E=\sqrt{\frac{\Delta\kappa_{1}^{2}+\Delta\kappa_{2}^{2}}{2}} -->
 
 
 Implementation
