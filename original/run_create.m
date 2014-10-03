@@ -12,10 +12,18 @@ file = ''; % test.avi
 depth = 0; % Generate tif depthmap output files
 output = 1; % Generate tif depthmap/colour output files
 
-if (length(varargin)>=1) tt = varargin{1}; end;
-if (length(varargin)>=2) r = varargin{2}; end;
-if (length(varargin)>=3) d = varargin{3}; end;
-if (length(varargin)>=4) file = varargin{4}; end;
+if (length(varargin)>=1) 
+	tt = varargin{1}; 
+end;
+if (length(varargin)>=2) 
+	r = varargin{2}; 
+end;
+if (length(varargin)>=3) 
+	d = varargin{3}; 
+end;
+if (length(varargin)>=4) 
+	file = varargin{4}; 
+end;
 
 img = imread('brick_wall.jpg');
 img = double(img)./255.0;

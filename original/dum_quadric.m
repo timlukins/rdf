@@ -219,23 +219,40 @@ function [z,varargout] = dum_quadric(pm_x,pm_y,pv_coeffs)
      
       type = 0;
 
-      if     (p3==3 & p4==4 & delta<0 & ksame) type = 1;
-      elseif (p3==3 & p4==4 & delta>0 & ksame) type = 2;
-      elseif (p3==3 & p4==4 & delta>0 & ~ksame) type = 3;
-      elseif (p3==3 & p4==4 & delta<0 & ~ksame) type = 4;
-      elseif (p3==3 & p4==3 & ~ksame) type = 5;
-      elseif (p3==3 & p4==3 & ksame)  type = 6;
-      elseif (p3==2 & p4==4 & delta<0 & ksame) type = 7;
-      elseif (p3==2 & p4==4 & delta>0 & ~ksame)  type = 8;
-      elseif (p3==2 & p4==3 & ksame & ~Ksame) type = 9;
-      elseif (p3==2 & p4==3 & ksame & Ksame)  type = 10;
-      elseif (p3==2 & p4==3 & ~ksame)  type = 11;
-      elseif (p3==2 & p4==2 & ~ksame)  type = 12;
-      elseif (p3==2 & p4==2 & ksame)  type = 13;
-      elseif (p3==1 & p4==3)  type = 14;
-      elseif (p3==1 & p4==2 & ~Ksame) type = 15;
-      elseif (p3==1 & p4==2 & Ksame) type = 16;
-      elseif (p3==1 & p4==1)  type = 17;
+      if (p3==3 & p4==4 & delta<0 & ksame) 
+				type = 1;
+      elseif (p3==3 & p4==4 & delta>0 & ksame) 
+				type = 2;
+      elseif (p3==3 & p4==4 & delta>0 & ~ksame) 
+				type = 3;
+      elseif (p3==3 & p4==4 & delta<0 & ~ksame) 
+				type = 4;
+      elseif (p3==3 & p4==3 & ~ksame) 
+				type = 5;
+      elseif (p3==3 & p4==3 & ksame) 
+				type = 6;
+      elseif (p3==2 & p4==4 & delta<0 & ksame) 
+				type = 7;
+      elseif (p3==2 & p4==4 & delta>0 & ~ksame) 
+				type = 8;
+      elseif (p3==2 & p4==3 & ksame & ~Ksame) 
+				type = 9;
+      elseif (p3==2 & p4==3 & ksame & Ksame) 
+				type = 10;
+      elseif (p3==2 & p4==3 & ~ksame) 
+			 	type = 11;
+      elseif (p3==2 & p4==2 & ~ksame) 
+			 	type = 12;
+      elseif (p3==2 & p4==2 & ksame) 
+				type = 13;
+      elseif (p3==1 & p4==3) 
+			 	type = 14;
+      elseif (p3==1 & p4==2 & ~Ksame) 
+				type = 15;
+      elseif (p3==1 & p4==2 & Ksame) 
+				type = 16;
+      elseif (p3==1 & p4==1)  
+				type = 17;
       end;
 
       varargout(1) = {type}; 
@@ -257,11 +274,21 @@ function same=ksigns(vals)
   same = false;
 
   for v=1:length(vals)
-    if (vals(v)>0) pos=pos+1; end;
-    if (vals(v)<0) neg=neg+1; end;
-    if (vals(v)==0) zer=zer+1; end;   
+    if (vals(v)>0) 
+			pos=pos+1; 
+    end;
+    if (vals(v)<0) 
+			neg=neg+1; 
+    end;
+    if (vals(v)==0) 
+			zer=zer+1; 
+    end;   
   end;
 
-  if (pos>0 & neg==0) same=true; end;
-  if (neg>0 & pos==0) same=true; end;
+  if (pos>0 & neg==0) 
+		same=true; 
+  end;
+  if (neg>0 & pos==0) 
+		same=true; 
+  end;
 

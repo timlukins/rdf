@@ -235,7 +235,9 @@ function [rv_coeffs,varargout] = dum_fitquadric(pm_P,varargin)
         
         % Stop if last pop...
 
-        if (g==ls_p) break; end;
+        if (g==ls_p) 
+					break; 
+        end;
 
         % Create next generation...
 

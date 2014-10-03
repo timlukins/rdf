@@ -36,7 +36,7 @@ function [x,y,z,f] = ellipdata(r,s,t,theta,d)
 
    % Resample orthogonally 
  
-   warning off MATLAB:griddata:DuplicateDataPoints
+   %warning off MATLAB:griddata:DuplicateDataPoints
    %[x,y]=meshgrid(linspace(-r,r,d),linspace(-r,r,d));
    [x,y]=meshgrid(linspace(-1,1,d),linspace(-1,1,d));
    z = griddata(lm_nx,lm_ny,lm_nz,x,y);
